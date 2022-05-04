@@ -135,7 +135,7 @@ const RawCapacity: React.FC<RawCapacityProps> = ({
           name="requestSize"
           value={osdSizeWithoutUnit}
           aria-label="requestSize"
-          data-test-id="requestSize"
+          data-test="requestSize"
         />
         <TextContent className="ceph-add-capacity__provisioned-capacity">
           {' '}
@@ -421,7 +421,7 @@ const AddCapacityModal: React.FC<AddCapacityModalProps> = ({
         )}
       </ModalBody>
       <ModalFooter>
-        <Button key="cancel" variant="secondary" onClick={closeModal}>
+        <Button key="cancel" variant="secondary" onClick={closeModal} data-test-id='modal-cancel-action'>
           {t('Cancel')}
         </Button>
         {!loading || !inProgress ? (
